@@ -1,0 +1,154 @@
+{
+  "routes": [
+    {
+      "route": "/api/v1/login",
+      "method": "POST",
+      "controller": "../components/user/controller/UserController.js",
+      "secured": false,
+      "action": "login"
+    },
+    {
+      "route": "/api/v1/logout",
+      "method": "POST",
+      "controller": "../components/user/controller/UserController.js",
+      "secured": false,
+      "action": "logout"
+    },
+    {
+      "route": "/api/v1/user",
+      "method": "POST",
+      "controller": "../components/user/controller/UserController.js",
+      "secured": true,
+      "isAdminRoute": true,
+      "action": "createUser"
+    },
+    {
+      "route": "/api/v1/user",
+      "method": "GET",
+      "controller": "../components/user/controller/UserController.js",
+      "secured": true,
+      "isAdminRoute": true,
+      "action": "getAllUsers"
+    },
+    {
+      "route": "/api/v1/user/:userId",
+      "method": "GET",
+      "controller": "../components/user/controller/UserController.js",
+      "secured": true,
+      "isAdminRoute": true,
+      "action": "getUserById"
+    },
+    {
+      "route": "/api/v1/user/:userId",
+      "method": "PUT",
+      "controller": "../components/user/controller/UserController.js",
+      "secured": true,
+      "isAdminRoute": true,
+      "action": "updateUser"
+    },
+    {
+      "route": "/api/v1/user/:userId/networth",
+      "method": "GET",
+      "controller": "../components/user/controller/UserController.js",
+      "secured": true,
+      "isAdminRoute": true,
+      "action": "getNetworth"
+    },
+    {
+      "route": "/api/v1/bank",
+      "method": "POST",
+      "controller": "../components/bank/controller/BankController.js",
+      "secured": true,
+      "isAdminRoute": true,
+      "action": "createBank"
+    },
+    {
+      "route": "/api/v1/bank",
+      "method": "GET",
+      "controller": "../components/bank/controller/BankController.js",
+      "secured": true,
+      "isAdminRoute": true,
+      "action": "getAllBanks"
+    },
+    {
+      "route": "/api/v1/bank/:bankId",
+      "method": "GET",
+      "controller": "../components/bank/controller/BankController.js",
+      "secured": true,
+      "isAdminRoute": true,
+      "action": "getBankById"
+    },
+    {
+      "route": "/api/v1/bank/:bankId",
+      "method": "PUT",
+      "controller": "../components/bank/controller/BankController.js",
+      "secured": true,
+      "isAdminRoute": true,
+      "action": "updateBank"
+    },
+    {
+      "route": "/api/v1/bank/:bankId/banktotal",
+      "method": "GET",
+      "controller": "../components/bank/controller/BankController.js",
+      "secured": true,
+      "isAdminRoute": true,
+      "action": "getBankTotal"
+    },
+    {
+      "route": "/api/v1/user/:userId/account",
+      "method": "POST",
+      "controller": "../components/account/controller/AccountController.js",
+      "secured": true,
+      "isAdminRoute": false,
+      "action": "createAccount"
+    },
+    {
+      "route": "/api/v1/user/:userId/account",
+      "method": "GET",
+      "controller": "../components/account/controller/AccountController.js",
+      "secured": true,
+      "isAdminRoute": false,
+      "action": "getAllAccounts"
+    },
+    {
+      "route": "/api/v1/user/:userId/account/:accountId",
+      "method": "GET",
+      "controller": "../components/account/controller/AccountController.js",
+      "secured": true,
+      "isAdminRoute": false,
+      "action": "getAccountById"
+    },
+    {
+      "route": "/api/v1/user/:userId/account/:accountId/transaction/deposite",
+      "method": "PUT",
+      "controller": "../components/transaction/controller/TransactionController.js",
+      "secured": true,
+      "isAdminRoute": false,
+      "action": "depositAmount"
+    },
+    {
+      "route": "/api/v1/user/:userId/account/:accountId/transaction/withdraw",
+      "method": "PUT",
+      "controller": "../components/transaction/controller/TransactionController.js",
+      "secured": true,
+      "isAdminRoute": false,
+      "action": "withdrawAmount"
+    },
+    {
+      "route": "/api/v1/user/:userId/account/:accountId/transaction/transfer",
+      "method": "PUT",
+      "controller": "../components/transaction/controller/TransactionController.js",
+      "secured": true,
+      "isAdminRoute": false,
+      "action": "transferAmount"
+    },
+    {
+      "route": "/api/v1/user/:userId/account/:accountId/transaction/passbook",
+      "method": "GET",
+      "controller": "../components/transaction/controller/TransactionController.js",
+      "secured": true,
+      "isAdminRoute": false,
+      "action": "getPassbook"
+    }
+  ]
+}
